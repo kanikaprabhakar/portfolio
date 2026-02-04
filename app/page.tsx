@@ -1,80 +1,154 @@
-import Link from "next/link";
-
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="max-w-4xl">
-          <div className="mb-6">
-            <span className="text-blue-400 text-lg">Hi, my name is</span>
+    <main>
+      <section className="section hero">
+        <div className="hero-left">
+          <h1 className="hero-name">Kanika<br />Prabhakar</h1>
+          <div className="hero-pills">
+            <span className="pill">Comp Sci undergrad</span>
+            <span className="pill">read more</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">
-            Kanika Prabhakar
-          </h1>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-400 mb-6">
-            Full Stack Developer & CSE Student
-          </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mb-8">
-            I'm a Computer Science Engineering student at Chitkara University, passionate about 
-            building innovative web applications and solving complex problems. Experienced 
-            in full-stack development with a strong foundation in DSA and modern web technologies.
-          </p>
-          <Link 
-            href="/projects"
-            className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium px-8 py-3 rounded-lg transition"
-          >
-            View My Work
-          </Link>
+        </div>
+        <div className="hero-right">
+          <div className="tile black" />
+          <div className="tile cream" />
+          <div className="tile pink" />
+          <div className="tile cream" />
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 px-6 bg-gray-900/50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">About Me</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-gray-400 mb-4">
-                I'm currently pursuing my Bachelor's degree in Computer Science and 
-                Engineering at Chitkara University. I specialize in full-stack development and have 
-                hands-on experience building scalable web applications using modern technologies.
-              </p>
-              <p className="text-gray-400 mb-4">
-                With a strong foundation in Data Structures & Algorithms (solved 600+ problems) 
-                and experience in technologies like React, Next.js, Node.js, and MongoDB, I'm 
-                passionate about creating efficient and user-friendly solutions.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Skills & Technologies</h3>
-              <div className="flex flex-wrap gap-2">
-                {['C++', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'Git', 'DSA'].map((skill) => (
-                  <span key={skill} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-md text-sm">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+      <section className="section about">
+        <div className="about-text">
+          <p>
+            Hello! I’m Kanika!
+          </p>
+          <p>
+            I’m a CSE undergrad based in Chandigarh. I’m passionate about building meaningful
+            digital experiences through web development and exploring how technology shapes the
+            way we communicate. Alongside coding, I’m part of the core team of my university’s
+            debating society, where I work as the Social Media Manager, combining creativity and
+            strategy to spark conversations that matter.
+          </p>
+
+          <p>
+            When I’m not working (or debugging), you’ll probably find me keeping up with what’s
+            happening around the world, connecting it back to how stories unfold online, or
+            sharpening my public speaking through debating.
+          </p>
+        </div>
+        <div className="about-right">
+          <div className="image-placeholder" />
+          <div className="small-tiles">
+            <div className="tile pink" />
+            <div className="tile cream" />
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Let's Build Something Together</h2>
-          <p className="text-gray-400 mb-8">
-            I'm currently looking for internship opportunities and collaborations
-          </p>
-          <Link 
-            href="/contact"
-            className="inline-block border border-blue-500 text-blue-400 hover:bg-blue-500/10 font-medium px-8 py-3 rounded-lg transition"
-          >
-            Get In Touch
-          </Link>
+      <section className="section skills">
+        <span className="pill">what i do</span>
+        <div className="skills-grid">
+          <div className="skill-card">
+            <div className="skill-image" />
+            <h3 className="skill-title">Full Stack Development</h3>
+            <p className="skill-text">
+              I build responsive web apps with Next.js, Node.js, and Spring Boot, focusing on
+              clean UI and strong backend systems.
+            </p>
+          </div>
+          <div className="skill-card">
+            <div className="skill-image" />
+            <h3 className="skill-title">Problem Solving (DSA)</h3>
+            <p className="skill-text">
+              I enjoy solving DSA challenges to sharpen my logic and write efficient, structured
+              code.
+            </p>
+          </div>
+          <div className="skill-card">
+            <div className="skill-image" />
+            <h3 className="skill-title">Communication & Leadership</h3>
+            <p className="skill-text">
+              As Social Media Manager and a core debating society member, I combine creativity,
+              teamwork, and public speaking.
+            </p>
+          </div>
         </div>
       </section>
-    </div>
+
+      <section className="section projects">
+        <span className="pill">what i’ve done</span>
+        <div className="projects-grid">
+          {[
+            "Online Exam App",
+            "Wireless Assistive Messaging Glove",
+            "Ads",
+            "Videos",
+            "Translation Work",
+            "Songs",
+          ].map((title) => (
+            <div key={title} className="project-card">
+              <div className="project-image" />
+              <span className="project-label">{title}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section now">
+        <div className="now-header">
+          <span className="pill">what i’m doing right now</span>
+        </div>
+        <div className="now-grid">
+          <div>
+            <h3 className="now-title">Agile Development</h3>
+            <p className="now-text">
+              I’m actively working on agile-based software projects, learning how real teams
+              collaborate through sprints, task breakdown, and continuous improvement. I enjoy
+              the fast-paced workflow of building, testing, and iterating on features that
+              actually solve problems.
+            </p>
+          </div>
+          <div>
+            <h3 className="now-title">Backend + System Design</h3>
+            <p className="now-text">
+              I’m strengthening my backend development skills with Spring Boot, while also
+              exploring how scalable systems are structured. From REST APIs and authentication
+              architectures to microservices, I love understanding what happens behind the
+              scenes of modern applications.
+            </p>
+          </div>
+          <div>
+            <h3 className="now-title">DSA + Cloud</h3>
+            <p className="now-text">
+              Alongside development, I consistently practice data structures and algorithms to
+              sharpen my problem-solving mindset. I’m also building my foundation in cloud
+              technologies like AWS, exploring how applications are deployed, scaled, and managed
+              in real-world environments.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section contact">
+        <div className="contact-left">
+          <h2>get in touch</h2>
+          <div className="contact-details">
+            <span className="pill">Chitkara University, Punjab</span>
+            <span className="pill">kanikaprabhakar<span className="no-watermark">2005</span>@gmail.com</span>
+            <div className="socials">
+              <span className="social-dot">t</span>
+              <span className="social-dot">ig</span>
+              <span className="social-dot">f</span>
+            </div>
+          </div>
+        </div>
+        <div className="contact-right">
+          <div className="corner-tile" />
+          <div className="corner-tile black" />
+          <div className="corner-tile pink" />
+          <div className="corner-tile" />
+        </div>
+      </section>
+    </main>
   );
 }
