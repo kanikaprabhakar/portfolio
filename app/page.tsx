@@ -134,8 +134,9 @@ export default function Home() {
           <h2>get in touch</h2>
           <div className="contact-details">
             <span className="pill">Chitkara University, Punjab</span>
-            <span className="pill">kanikaprabhakar<span className="no-watermark">2005</span>@gmail.com</span>
-            <div className="socials">
+            <span className="pill">kanikaprabhakar2005@gmail.com</span>            <a href="/contact-form" className="pill" style={{ textDecoration: "none", color: "inherit" }}>
+              send me a note
+            </a>            <div className="socials">
               <span className="social-dot">t</span>
               <span className="social-dot">ig</span>
               <span className="social-dot">f</span>
