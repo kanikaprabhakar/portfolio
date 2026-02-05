@@ -1,3 +1,5 @@
+'use client';
+
 export default function Home() {
   return (
     <main>
@@ -5,15 +7,17 @@ export default function Home() {
         <div className="hero-left">
           <h1 className="hero-name">Kanika<br />Prabhakar</h1>
           <div className="hero-pills">
-            <span className="pill">Comp Sci undergrad</span>
-            <span className="pill">read more</span>
+            <span className="pill undergrad-pill">Comp Sci undergrad</span>
           </div>
+          <button 
+            className="pill read-more-btn" 
+            onClick={() => document.querySelector('.about')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            read more
+          </button>
         </div>
         <div className="hero-right">
-          <div className="tile black" />
-          <div className="tile cream" />
-          <div className="tile pink" />
-          <div className="tile cream" />
+          <img src="/images/p1.JPG" alt="Hero image" className="hero-image" />
         </div>
       </section>
 
@@ -37,35 +41,31 @@ export default function Home() {
           </p>
         </div>
         <div className="about-right">
-          <div className="image-placeholder" />
-          <div className="small-tiles">
-            <div className="tile pink" />
-            <div className="tile cream" />
-          </div>
+          <img src="/images/p2.JPG" alt="About image" className="about-image" />
         </div>
       </section>
 
       <section className="section skills">
-        <span className="pill">what i do</span>
+        <span className="pill skills-pill">what i do</span>
         <div className="skills-grid">
           <div className="skill-card">
-            <div className="skill-image" />
+            <img src="/images/fs.JPG" alt="Full Stack Development" className="skill-image" />
             <h3 className="skill-title">Full Stack Development</h3>
             <p className="skill-text">
               I build responsive web apps with Next.js, Node.js, and Spring Boot, focusing on
               clean UI and strong backend systems.
             </p>
           </div>
-          <div className="skill-card">
-            <div className="skill-image" />
+          <div className="skill-card dsa-card">
+            <img src="/images/dsa.JPG" alt="Problem Solving DSA" className="skill-image" />
             <h3 className="skill-title">Problem Solving (DSA)</h3>
             <p className="skill-text">
               I enjoy solving DSA challenges to sharpen my logic and write efficient, structured
               code.
             </p>
           </div>
-          <div className="skill-card">
-            <div className="skill-image" />
+          <div className="skill-card comm-card">
+            <img src="/images/debate.JPG" alt="Communication & Leadership" className="skill-image" />
             <h3 className="skill-title">Communication & Leadership</h3>
             <p className="skill-text">
               As Social Media Manager and a core debating society member, I combine creativity,
@@ -94,8 +94,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section now">
-        <div className="now-header">
+      <section className="section now">        <img src="/images/p3.JPG" alt="Current work" className="now-image" />        <div className="now-header">
           <span className="pill">what i’m doing right now</span>
         </div>
         <div className="now-grid">
@@ -134,20 +133,25 @@ export default function Home() {
           <h2>get in touch</h2>
           <div className="contact-details">
             <span className="pill">Chitkara University, Punjab</span>
-            <span className="pill">kanikaprabhakar2005@gmail.com</span>            <a href="/contact-form" className="pill" style={{ textDecoration: "none", color: "inherit" }}>
+            <span className="pill">kanikaprabhakar2005@gmail.com</span>
+            <a href="/contact-form" className="pill note-btn">
               send me a note
-            </a>            <div className="socials">
-              <span className="social-dot">t</span>
-              <span className="social-dot">ig</span>
-              <span className="social-dot">f</span>
+            </a>
+            <div className="socials">
+              <a className="social-dot" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                in
+              </a>
+              <a className="social-dot" href="https://github.com/" target="_blank" rel="noreferrer">
+                gh
+              </a>
+              <a className="social-dot" href="https://leetcode.com/" target="_blank" rel="noreferrer">
+                lc
+              </a>
             </div>
           </div>
         </div>
         <div className="contact-right">
-          <div className="corner-tile" />
-          <div className="corner-tile black" />
-          <div className="corner-tile pink" />
-          <div className="corner-tile" />
+          <img src="/images/p4.JPG" alt="Contact image" className="contact-image" />
         </div>
       </section>
     </main>

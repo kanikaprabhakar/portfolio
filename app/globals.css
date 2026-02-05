@@ -46,6 +46,8 @@ main {
   display: grid;
   grid-template-columns: 58% 42%;
   gap: 32px;
+  position: relative;
+  padding-right: 0;
 }
 
 .hero-left {
@@ -56,7 +58,7 @@ main {
 }
 
 .hero-name {
-  font-size: 120px;
+  font-size: 140px;
   line-height: 0.95;
   letter-spacing: -1px;
   font-weight: 700;
@@ -65,8 +67,8 @@ main {
 
 .pill {
   border: 1px solid #111;
-  border-radius: 999px;
-  padding: 10px 16px;
+  border-radius: 50%;
+  padding: 32px 30px;
   font-size: 32px;
   display: inline-flex;
   align-items: center;
@@ -78,13 +80,60 @@ main {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-top: 40px;
+}
+
+.undergrad-pill {
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+.read-more-btn {
+  position: absolute;
+  bottom: 80px;
+  right: 44%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Heading Now", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+}
+
+.note-btn {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: var(--black);
+  color: var(--pink);
+  transform: translateY(-2px);
+}
+
+.note-btn:hover {
+  background: var(--black);
+  color: var(--pink);
+  transform: translateY(-2px);
 }
 
 .hero-right {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 14px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 42%;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .tile {
@@ -125,22 +174,17 @@ main {
 }
 
 .about-right {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  gap: 16px;
-  align-items: start;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: 24px;
 }
 
-.image-placeholder {
-  background: #d9d9d9;
-  border: 2px solid #111;
-  min-height: 280px;
-}
-
-.small-tiles {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
 }
 
 .skills {
@@ -150,10 +194,23 @@ main {
   padding-top: 120px;
 }
 
+.skills-pill {
+  align-self: flex-start;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  align-items: start;
+}
+
+.dsa-card {
+  margin-top: -36px;
+}
+
+.comm-card {
+  margin-top: -52px;
 }
 
 .skill-card {
@@ -163,9 +220,11 @@ main {
 }
 
 .skill-image {
-  background: #d9d9d9;
-  border: 2px solid #7e2dff;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   min-height: 200px;
+  border: 2px solid #7e2dff;
 }
 
 .skill-title {
@@ -219,18 +278,34 @@ main {
   background: var(--cream);
   flex-direction: column;
   gap: 24px;
-  padding-top: 120px;
+  padding-top: 0;
+  position: relative;
+}
+
+.now-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  max-width: 40%;
+  object-fit: contain;
+  z-index: 1;
 }
 
 .now-header {
   display: flex;
   justify-content: flex-end;
+  padding-top: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 .now-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 36px;
+  margin-top: 36px;
 }
 
 .now-title {
@@ -250,6 +325,8 @@ main {
   display: grid;
   grid-template-columns: 58% 42%;
   gap: 32px;
+  padding-right: 0;
+  position: relative;
 }
 
 .contact-left {
@@ -277,34 +354,34 @@ main {
 .social-dot {
   width: 36px;
   height: 36px;
-  border-radius: 999px;
+  border-radius: 50px;
   border: 1px solid #111;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   background: transparent;
+  text-decoration: none;
+  color: inherit;
 }
 
 .contact-right {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 14px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 42%;
 }
 
-.corner-tile {
-  border: 2px solid #111;
-  min-height: 220px;
-  background: var(--cream);
-}
-
-.corner-tile.black {
-  background: #000;
-}
-
-.corner-tile.pink {
-  background: var(--pink);
+.contact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .no-watermark {
