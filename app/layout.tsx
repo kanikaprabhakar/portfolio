@@ -13,8 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - CSE Student",
+  title: "Kanika Prabhakar",
   description: "Personal portfolio showcasing my projects and skills",
+  icons: {
+    icon: [
+      {
+        url: "/images/star.png",
+        sizes: "any",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

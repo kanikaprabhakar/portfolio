@@ -52,16 +52,14 @@ export default function Home() {
             <img src="/images/fs.JPG" alt="Full Stack Development" className="skill-image" />
             <h3 className="skill-title">Full Stack Development</h3>
             <p className="skill-text">
-              I build responsive web apps with Next.js, Node.js, and Spring Boot, focusing on
-              clean UI and strong backend systems.
+              I build scalable web applications with Next.js, React, Node.js, and Spring Boot. Experienced with REST APIs, SQL, Hibernate ORM, and modern frontend technologies.
             </p>
           </div>
           <div className="skill-card dsa-card">
             <img src="/images/dsa.JPG" alt="Problem Solving DSA" className="skill-image" />
             <h3 className="skill-title">Problem Solving (DSA)</h3>
             <p className="skill-text">
-              I enjoy solving DSA challenges to sharpen my logic and write efficient, structured
-              code.
+              Strong foundation in Data Structures & Algorithms, System Design Fundamentals, and efficient problem-solving with clean, optimized code.
             </p>
           </div>
           <div className="skill-card comm-card">
@@ -78,19 +76,34 @@ export default function Home() {
       <section className="section projects">
         <span className="pill">what i’ve done</span>
         <div className="projects-grid">
-          {[
-            "Online Exam App",
-            "Wireless Assistive Messaging Glove",
-            "Ads",
-            "Videos",
-            "Translation Work",
-            "Songs",
-          ].map((title) => (
-            <div key={title} className="project-card">
-              <div className="project-image" />
-              <span className="project-label">{title}</span>
+          <div className="project-card">
+            <img src="/images/evalora.JPG" alt="Evalora" className="project-image" style={{objectFit: 'cover', height: '100%'}} />
+            <span className="project-label">Evalora</span>
+            <div style={{display: 'flex', gap: '8px', marginTop: '8px', marginLeft: '16px'}}>
+              <a href="https://github.com/kanikaprabhakar/Online-Exam-App" target="_blank" rel="noreferrer" style={{fontSize: '14px', textDecoration: 'underline'}}>GitHub</a>
+              <a href="https://evalora.up.railway.app/" target="_blank" rel="noreferrer" style={{fontSize: '14px', textDecoration: 'underline'}}>Live</a>
             </div>
-          ))}
+          </div>
+          <div className="project-card">
+            <img src="/images/wamg.png" alt="WAMG" className="project-image" />
+            <span className="project-label">Wireless Assistive Messaging Glove</span>
+          </div>
+          <div className="project-card">
+            <img src="/images/java.png" alt="Java - SpringBoot" className="project-image" />
+            <span className="project-label">Java - SpringBoot</span>
+          </div>
+          <div className="project-card">
+            <img src="/images/fs-2.png" alt="Full Stack Dev" className="project-image" />
+            <span className="project-label">Full Stack Dev</span>
+          </div>
+          <div className="project-card">
+            <img src="/images/db.png" alt="Databases & ORM" className="project-image" />
+            <span className="project-label">Databases & ORM</span>
+          </div>
+          <div className="project-card">
+            <img src="/images/aws.png" alt="AWS Cloud" className="project-image" />
+            <span className="project-label">AWS Cloud</span>
+          </div>
         </div>
       </section>
 
@@ -133,18 +146,18 @@ export default function Home() {
           <h2>get in touch</h2>
           <div className="contact-details">
             <span className="pill">Chitkara University, Punjab</span>
-            <span className="pill">kanikaprabhakar2005@gmail.com</span>
+            <span className="pill">kanikaprabhakar<span className="no-watermark">2005</span>@gmail.com</span>
             <a href="/contact-form" className="pill note-btn">
               send me a note
             </a>
             <div className="socials">
-              <a className="social-dot" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+              <a className="social-dot" href="https://www.linkedin.com/in/kanika-prabhakar-4899942a8/" target="_blank" rel="noreferrer">
                 in
               </a>
-              <a className="social-dot" href="https://github.com/" target="_blank" rel="noreferrer">
+              <a className="social-dot" href="https://github.com/kanikaprabhakar" target="_blank" rel="noreferrer">
                 gh
               </a>
-              <a className="social-dot" href="https://leetcode.com/" target="_blank" rel="noreferrer">
+              <a className="social-dot" href="https://leetcode.com/u/qQDuXeOdiy/" target="_blank" rel="noreferrer">
                 lc
               </a>
             </div>
